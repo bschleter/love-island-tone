@@ -4,28 +4,34 @@
   <meta charset="UTF-8">
   <title>Love Island Text Tone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fcddec;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe5eb, #ffc1de);
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
       margin: 0;
       flex-direction: column;
+      text-align: center;
     }
     button {
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #ff69b4;
+      font-size: 1.8rem;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #ff85c1, #ff69b4);
       color: white;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 6px 10px rgba(0,0,0,0.15);
       cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    button:hover {
-      background-color: #ff85c1;
+    button:active {
+      transform: scale(0.97);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
     footer {
       margin-top: 1rem;
@@ -35,8 +41,8 @@
   </style>
 </head>
 <body>
-  <button onclick="document.getElementById('islandSound').play()">I've Got a Text!</button>
+  <button onclick="document.getElementById('islandSound').play(); navigator.vibrate?.(100);">I've Got a Text!</button>
   <audio id="islandSound" src="love-island-text-tone.mp3"></audio>
-  <footer>No ads. No mugging off. Just the tone.</footer>
+  <footer>No ads. No garbage videos or spam. Just the tone. Ooooooh shit!</footer>
 </body>
 </html>
